@@ -5,44 +5,116 @@
 }
 :root {
   font-size: 62.5%;
+  --pag-color: #e1e1dd;
+  --menu-color: #c4170c;
+  --text-color: #fff;
 }
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
-  background-color: #8c8c8c;
+  line-height: 1.5;
+  background-color: var(--pag-color);
+}
+header .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--menu-color);
   align-items: center;
-  justify-content: center;
+  color: var(--text-color);
+  margin-bottom: 2rem;
 }
-.form-body {
-  background-color: #f5f5f5;
-  padding: 2rem;
-  border: 5px solid blueviolet;
-  border-radius: 20px;
+header .container h1 {
+  font-size: 10rem;
+  font-weight: 900;
+  color: var(--text-color);
 }
-.form-body form {
+header .container nav ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 5rem;
+  list-style: none;
 }
-.form-body form label {
-  margin-top: 2rem;
+header .container nav ul li {
+  font-size: 1.8rem;
 }
-.form-body form input {
-  padding: 0.5rem;
-  border: 3px solid #ccc;
-  border-radius: 5px;
+header .container nav ul li a:hover {
+  font-weight: 900;
+  border-bottom: 4px solid;
+  color: var(--text-color);
+}
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4rem;
+  margin-bottom: 1rem;
+}
+maim .container {
+  margin: 2rem;
+}
+.container h2 {
+  font-size: 6rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  border-bottom: 6px solid var(--text-color);
+}
+.articles {
+  display: flex;
+}
+article {
+  margin: 2rem;
+}
+article header {
+  display: flex;
+}
+.articles article img {
   width: 100%;
+  height: 40rem;
+  object-fit: cover;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
-.form-body form button {
-  margin-top: 2rem;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  background-color: blueviolet;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
+.articles article img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+article header time {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+#sports {
+  background-color: #6a7119;
+}
+article h3 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--text-color);
+  margin: 2rem 0;
+  line-height: 100%;
+}
+article p {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+article button {
+  background-color: green;
+  border: #6a7119;
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+#economy {
+  background-color: #e87325;
+}
+#politic {
+  background-color: #4f9ff1;
+}
+#entertainment {
+  background-color: #b31bb5;
 }
