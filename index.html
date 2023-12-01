@@ -8,6 +8,7 @@
   </head>
   <body>
     <fieldset class="container">
+      <h1>Qual numero é maior??</h1>
       <form id="my-form" action="">
         <label for="primary-number">Digite um numero no campo A</label>
         <input
@@ -17,9 +18,12 @@
           required
         />
         <label for="second-number">Digite um numero no campo B</label>
+        <p class="error-message"></p>
         <input type="number" id="second-number" name="second-number" required />
-        <button type="submit">Enviar</button>
+        <button type="submit">Resultado</button>
       </form>
+      <p class="error-message2"></p>
+      <p class="success-message"></p>
     </fieldset>
     <script src="./main.js"></script>
   </body>

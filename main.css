@@ -22,8 +22,15 @@ body {
   border: 4px solid #fff;
   border-radius: 3rem;
   overflow: hidden;
+  flex-direction: column;
+  align-items: center;
   width: auto;
-  height: auto;
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  border-bottom: 0.5rem solid #fff;
 }
 #my-form {
   display: flex;
@@ -40,21 +47,66 @@ body {
   padding: 1rem;
   border-radius: 1rem;
   border: none;
-  margin-bottom: 4rem;
   width: 30%;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 #my-form button {
+  margin-top: 4rem;
   font-size: 1.6rem;
   padding: 1rem;
   border-radius: 1rem;
   border: none;
-  background-color: #fff;
-  color: #5d017d;
+  color: #fff;
   cursor: pointer;
-  width: 30%;
   width: 20rem;
+  background-color: #ac72bf;
 }
 #my-form button:hover {
-  background-color: #ac72bf;
+  background-color: #09ff11;
   color: #fff;
+}
+.success-message {
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 2rem;
+  display: none;
+  background-color: #09ff11;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.error-message2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 2rem;
+  display: none;
+  background-color: red;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.error-message3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 2rem;
+  background-color: red;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: block;
+}
+.error-message {
+  background-color: red;
+  font-size: 2rem;
+  color: #fff;
+  display: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+input .error {
+  color: red;
+  border-color: red;
+  outline-color: red;
 }
