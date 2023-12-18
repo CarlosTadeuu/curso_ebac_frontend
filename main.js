@@ -4,11 +4,10 @@ const imgAprovado = '<img src="./img/aprovado.png"'
 const imgReprovado = '<img src="./img/reprovado.png"'
 const atividades = [];
 const notas = [];
-const spanAprovado = '<span class="resultado aprovado">Aprovado</span>'
-const spanReprovado = '<span class="resultado reprovado">Reprovado</span>'
+const spanAprovado = '<span class="resultado aprovado">Aprovado</span>';
+const spanReprovado = '<span class="resultado reprovado">Reprovado</span>';
 
-const bodyContainer = document.getElementsByClassName('container');
-
+const cssContainer = document.querySelector('.container');
 
 let linhas = '';
 
@@ -64,9 +63,18 @@ function mediaFinal(mediaa) {
     linhaMedia += `<td>${mediaa >= 7 ? spanAprovado : spanReprovado }</td>`;
     linhaMedia += '</tr>';
 
+
     linhass = linhaMedia;
 
+    if (mediaa >= 7) {
+        cssContainer.classList.add('shadowAprovado');
+        cssContainer.classList.remove('shadowReprovado');
+    } else {
+        cssContainer.classList.add('shadowReprovado');
+        cssContainer.classList.remove('shadowAprovado');
+    }
 
     const somaMedia = document.querySelector('tfoot');
     somaMedia.innerHTML = linhass;
 }
+
