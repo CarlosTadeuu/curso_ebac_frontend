@@ -8,5 +8,6 @@ $(document).ready(function () {
         $(this).toggleClass("active");
       });
     $("ul").append(newItemAdd);
+    $("#name-item").val("");
   });
 });
