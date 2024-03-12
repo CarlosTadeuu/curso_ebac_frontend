@@ -3,236 +3,35 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  font-size: 62, 5%;
-}
-html {
-  overflow-x: hidden;
-}
 body {
-  background-color: #fba719;
-}
-.container_flex {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 1.6rem;
+  height: 100vh;
 }
 .container {
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-header {
-  background-color: #f46a20;
-  padding-top: 1.6rem;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100vw;
-}
-h1 {
-  font-size: 3.6rem;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-}
-nav {
-  background-color: #ffe53b;
-  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
-  display: none;
-}
-nav ul {
-  padding: 1rem 0;
-}
-nav li {
-  list-style: none;
-  display: inline;
-  margin-right: 4rem;
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 1rem 0;
-}
-nav li a {
-  color: #fff;
-  text-decoration: none;
-}
-.menuHamburguer {
-  width: 2.5rem;
-  cursor: pointer;
-}
-.menuHamburguer--line {
-  height: 0.2rem;
-  width: 100%;
-  background-color: #fff;
-  display: block;
-  margin-bottom: 0.4rem;
-}
-#carousel_imagens {
-  margin: 1rem 2rem;
-  margin-bottom: 3rem;
-  border-radius: 1rem;
-}
-.slick-track {
-  margin: 0px -7000px 0px 0px !important;
-  height: 100% !important;
-  height: 500px !important;
-}
-.cardapio_dia {
-  margin: 0 1rem;
-  background-color: #ff2525;
-  border-radius: 1rem;
-  overflow: hidden;
-  transition: transform 0.5s;
-}
-
-.cardapio_dia:hover {
-  transform: scale(1.1);
-}
-.cardapio_dia img {
-  height: 20rem;
-  width: 100%;
-}
-.cardapio_dia h2 {
-  font-size: 2.4rem;
-  text-align: center;
-  margin: 1rem 0;
-  color: #fff;
-  text-decoration: underline;
-}
-.cardapio_dia h3 {
-  font-size: 2rem;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-section.produtos h3 {
-  font-size: 2.4rem;
-  color: #fff;
-  border-bottom: 2px solid #fff;
-  margin-right: 20rem;
-  padding-left: 2rem;
-}
-.body-produtos {
   display: flex;
-  flex-wrap: wrap;
-  margin: 2rem 2rem 0 2rem;
-  width: 100%;
-}
-.set-produtos {
-  box-shadow: 0 0 8px 4px #e0138c;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  min-width: 30%;
-  margin: 0 3rem 3rem 0;
-  height: 30rem;
-}
-.set-produtos img {
-  margin-bottom: 1rem;
-  height: 15rem;
-}
-.set-produtos h4 {
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-.set-produtos p {
-  font-size: 1.6rem;
-  color: #fff;
-  text-align: center;
-}
-.set-produtos button {
-  background-color: #ff2525;
-  color: #fff;
-  font-size: 1.6rem;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 1rem;
-  margin-top: 1rem;
-  cursor: pointer;
-  transition: background-color 0.5s;
-  transition: transform 0.5s;
-}
-.set-produtos button:hover {
-  background-color: #d90707;
-  color: #fff;
-  transform: scale(1.1);
-}
-.form-campo {
-  margin-bottom: 1.6rem;
-}
-.form-campo label {
-  font-weight: bold;
-  font-size: 1.6rem;
-  display: block;
-  color: #fff;
-  margin-bottom: 0.4rem;
-}
-.form-campo input,
-.form-campo textarea {
-  width: 100%;
-  display: block;
-  padding: 1rem;
-  font-size: 1.6rem;
-  border-radius: 1rem;
-  border: none;
-  background-color: #fff;
-}
-.form-campo textarea {
-  resize: none;
-  height: 12rem;
-}
-form button {
-  background-color: #119759;
-  color: #fff;
-  font-size: 1.6rem;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: background-color 0.5s;
-  transition: transform 0.5s;
+  height: 100%;
 }
 form {
-  max-width: 36rem;
-  margin-bottom: 3rem;
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
-.formulario h2 {
-  font-size: 3rem;
-  margin: 2rem 0;
-  color: #fff;
-  text-transform: uppercase;
+form input {
+  margin-bottom: 20px;
 }
-footer {
-  background-color: #f46a20;
-  padding: 1.6rem 0;
-  color: #fff;
-}
-.rodape {
+form button.btn {
+  width: 40%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-footer p {
-  font-size: 1.6rem;
-}
-footer ul {
-  display: flex;
-}
-footer li {
-  list-style: none;
-  margin-right: 3rem;
-}
-footer a {
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4caf50;
   color: #fff;
-  text-decoration: none;
-}
-footer a img {
-  width: 2.5rem;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
 }
