@@ -1,69 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--CSS-->
-    <link rel="stylesheet" href="./main.css" />
-    <!--Fonts-->
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https: //fonts.googleapis.com/css2? família= Roboto:wght@400;700 & display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Calculadora de médias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./build/main.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <img src="./img/logo.png" alt="Beca e canudo de formatura" />
-        <h1>Calculadora de médias</h1>
-      </header>
-      <main>
-        <form id="my_form" action="">
-          <input
-            id="name_activity"
-            type="text"
-            required
-            placeholder="Nome da atividade"
-          />
-          <input
-            id="note"
-            type="number"
-            required
-            placeholder="Nota"
-            min="0"
-            max="10"
-          />
-          <button type="submit">Adicionar +</button>
-        </form>
-        <table cellspacing="0">
-          <thead>
-            <tr>
-              <th>Nome da atividade</th>
-              <th>Nota da atividade</th>
-              <th>Aprovado?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td></td>
-              <td id="notaFinal">---</td>
-              <td><span class="resultado">---</span></td>
-            </tr>
-          </tfoot>
-        </table>
-      </main>
-    </div>
-    <script src="./main.js"></script>
+    <header>
+      <div class="container">
+        <div class="branding">
+          <img src="https://via.placeholder.com/120x70" />
+        </div>
+        <nav>
+          <ul class="menu">
+            <li>
+              <a href="#">Início</a>
+            </li>
+            <li>
+              <a href="#">Produtos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <h2>Produtos</h2>
+        <ul class="products">
+          <li class="product-item">
+            <img src="https://via.placeholder.com/180x180" />
+            <h4>Nome do produto</h4>
+            <p>Descrição do produto, cor, tamanho, textura, etc.</p>
+            <a href="#" class="product-button"> Ver detalhes </a>
+          </li>
+          <li class="product-item">
+            <img src="https://via.placeholder.com/180x180" />
+            <h4>Nome do produto</h4>
+            <p>Descrição do produto, cor, tamanho, textura, etc.</p>
+            <a href="#" class="product-button"> Ver detalhes </a>
+          </li>
+          <li class="product-item">
+            <img src="https://via.placeholder.com/180x180" />
+            <h4>Nome do produto</h4>
+            <p>Descrição do produto, cor, tamanho, textura, etc.</p>
+            <a href="#" class="product-button"> Ver detalhes </a>
+          </li>
+          <li class="product-item">
+            <img src="https://via.placeholder.com/180x180" />
+            <h4>Nome do produto</h4>
+            <p>Descrição do produto, cor, tamanho, textura, etc.</p>
+            <a href="#" class="product-button"> Ver detalhes </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>
