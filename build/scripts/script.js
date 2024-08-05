@@ -1,0 +1,1 @@
+function sum(n,o){return n+o}console.log(sum(10,30));
