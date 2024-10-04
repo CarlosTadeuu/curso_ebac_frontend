@@ -1,90 +1,108 @@
-@import "./config/maps.less";
+@import "./config/mapas.less";
 @import "./config/reset.less";
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
 
+
 body{
-   background-color: #colors[backgroundColorPrimary];
-}
-.container {
-   max-width: 1024px;
-   width: 100%;
-   margin: 0 auto;
-     @media @breakpointTablet{
-         max-width: 80%;
-     }
-}
-header {
-   background-color: #colors[backgroundColorSecondary];
-   position: sticky;
-   top: 0;
-   left: 0;
-      .container{
+      font-family: #fonts[text-font];
+      background-color: #colors[backgroundColor];
+      h1{
          display: flex;
-         justify-content: space-between;
+         justify-content: center;
          align-items: center;
-         padding: 16px 0;
-            .menu{
-               display: flex;
-                  li{
-                     font-weight: bold;
-                     margin-left: 24px;
-                        a{
-                           color: #colors[textColor];
-                           text-decoration: none;
-                        }
-                  }
-            }
+         font-size: 12rem;
+         color: #colors[textColor];
+         border-bottom: 1rem solid #fff;
       }
-}
-section{
-   padding: 56px 0;
-      .products {
-         margin-top: 40px;
-         display: grid;
-         grid-template-columns: repeat(3, 32.66%);
-         column-gap: 1%;
-         row-gap: 4%;
-         width: 100%;
-         @media @breakpointTablet{
-            grid-template-columns: repeat(2, 48.5%);
-            column-gap: 3%;
+      p{
+         display: flex;
+         color: #colors[textP];
+         align-items: center;
+         justify-content: center;
+         font-size: 5rem;
+         margin-top: 3rem;
+
+         span{
+            margin-left: 2rem;
+            color: #colors[textColor];
          }
-         @media @breakpointMobile{
-            display: block;}
-            .product-item img {
-               width: 100%;
-               border-radius: 16px;
-               @media @breakpointMobile{
-                  margin-bottom: 32px;}
-            }
-            .product-button {
-               display: block;
-               background-color: #colors[buttonColor];
-               color: #colors[textColor];
-               text-align: center;
-               padding: 8px 0;
-               border-radius: 8px;
-               margin-top: 8px;
-               text-decoration: none;
-                 &:hover{
-                     background-color: #colors[buttonHoverColor];
-                 }
-           }
       }
 }
-.social-links{
+section#grupo-cartelas {
    display: flex;
-   justify-content: space-between;
-   max-width: 240px;
-   width: 100%;
-   margin: 30px auto 0;
-     li{
-       img{
-           transition: all ease .3s;
-           &:hover{
-               transform: scale(1.3);
-           }
-       }
-     }
+   flex-wrap: wrap;
+   justify-content: center;
+ 
+}
+
+.cartelas {
+   list-style: none; 
+   padding: 4rem;
+   margin: 0;
+   display: flex;
+   flex-wrap: wrap; 
+   justify-content: center; 
+}
+
+.cartela {
+   background-color: #fff;
+   border-radius: 50%; 
+   flex: 0 0 calc(9% - 1rem);
+   height: 10rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 2.5rem;
+   text-align: center;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+   margin-bottom: 2rem;
+   margin-right: 2rem;
+   padding: 5rem;
+   position: relative;
+}
+.cartela img {
+   position: absolute;
+   width: 50px;  /* Define o tamanho da imagem */
+   height: 50px; /* Mantém a imagem quadrada */
+   object-fit: contain;  /* Garante que a imagem se ajuste sem distorção */
+   display: none; /* Inicialmente, a imagem é oculta */
+}
+form{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 5rem;
+}
+label{
+   font-size: 3rem;
+   margin-right: 2rem;
+}
+input{
+   font-size: 3rem;
+   border: none;
+   border-radius: 2rem;
+   padding: 1rem 2rem;
+   margin-right: 2rem;
+}
+button{
+   font-size: 2rem;
+   padding: 1rem 2rem;
+   background-color: #84E509;
+   color: #fff;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+   margin-left: 0.5rem;
+   &:hover{
+      background-color: #486523;
+   }
+}
+@media (max-width: 768px) {
+   .cartela {
+      flex: 0 0 calc(20% - 1rem); /* Em telas menores, 5 cartelas por linha */
+      height: 6rem;
+      font-size: 2rem;
+   }
 }
