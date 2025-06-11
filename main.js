@@ -1,48 +1,16 @@
-class Jogador {
-	constructor(nick, classe) {
-		this.nick = nick;
-		this.classe = classe;
-	}
-}
-class Personagem extends Jogador {
-	constructor(nick, classe, level, hp, ataque, defesa) {
-		super(nick, classe);
-		this.level = level;
-		this.hp = hp;
-		this.ataque = ataque;
-		this.defesa = defesa;
-	}
-	atacar() {
-		console.log(`${this.nick} atacou com ${this.ataque} de dano`);
-	}
-}
-class Guerreiro extends Personagem {
-	constructor(nick, level, hp, ataque) {
-		super(nick, "Guerreiro", level, hp, ataque, "escudo");
-	}
-}
-class Mago extends Personagem {
-	constructor(nick, level, hp, ataque, mana) {
-		super(nick, "Mago", level, hp, ataque, "escudo mágico");
-		this.mana = mana;
-	}
-	lançarMagia() {
-		if (this.mana > 0) {
-			console.log(`${this.nick} lançou uma magia poderosa com ${this.ataque} de dano!`);
-			this.mana -= 10;
-		} else {
-			console.log(`${this.nick} está sem mana!`);
-		}
-	}
-}
+const alunos = [
+	{nome: "João", nota: 7.5},
+	{nome: "Maria", nota: 3},
+	{nome: "Pedro", nota: 6.5},
+	{nome: "Aline", nota: 9.5},
+	{nome: "Paulo", nota: 8.5},
+	{nome: "Ana", nota: 6.1},
+	{nome: "Lucas", nota: 5.9},
+	{nome: "Julia", nota: 4},
+	{nome: "Carlos", nota: 5.5},
+];
 
-const jogador1 = new Guerreiro("Thor", 5, 50, 15);
-const jogador2 = new Mago("Merlin", 7, 30, 20, 50);
-const jogador3 = new Mago("Gandalf", 10, 40, 25, 80);
-
-console.log(jogador1);
-console.log(jogador2);
-console.log(jogador3);
-jogador1.atacar();
-jogador2.lançarMagia();
-jogador3.lançarMagia();
+const alunosAprovados = alunos.filter((aluno) => aluno.nota >= 6);
+const nomeDosAprovados = alunosAprovados.map((aluno) => aluno.nome);
+console.log("Alunos aprovados:");
+console.log(nomeDosAprovados.join(", "));
